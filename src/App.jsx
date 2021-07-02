@@ -7,6 +7,7 @@ import '../node_modules/locomotive-scroll/src/locomotive-scroll.scss'
 import LocomotiveScroll from 'locomotive-scroll'
 import nikeLogo from './assets/nike-swoosh-logo.svg'
 import airMax97 from './assets/air-max-97.png'
+import airMax97SE from './assets/air-max-97-se.png'
 function App() {
     const [paused, setPaused] = useState(false)
     const ref = useRef(null)
@@ -50,11 +51,11 @@ function App() {
                     ></iframe> */}
                         <Vimeo
                             video='302326279'
-                            // autoplay
-                            // background
+                            autoplay
+                            background
                             muted
                             loop
-                            paused={paused}
+                            // paused={paused}
                             onReady={handlePlayerPlay}
                             controls={false}
                         />
@@ -62,9 +63,32 @@ function App() {
                 </div>
                 <div className='section'>
                     <div className='section1'>
-                        <p className='shoeName'>AIRMAX 97 ZIRMAX 97</p>
+                        <p className='shoeName'>AIRMAX 97 AIRMAX 97</p>
+                        <div className='glassInfoBox'>
+                            <p className='glassInfo'>
+                                Nike Air Max 97 shook up the running world with
+                                og ripple design and crisp color accents
+                            </p>
+                        </div>
                         <div className='circle'>
                             <img src={airMax97} className='mainShow' />
+                        </div>
+                    </div>
+                </div>
+                <div className='section'>
+                    <div
+                        className='section1'
+                        style={{ background: '#A69682', height: '100%' }}
+                    >
+                        <p className='shoeName'>AIRMAX 97 AIRMAX 97</p>
+                        <div className='glassInfoBox'>
+                            <p className='glassInfo'>
+                                Nike Air Max 97 shook up the running world with
+                                og ripple design and crisp color accents
+                            </p>
+                        </div>
+                        <div className='circle'>
+                            <img src={airMax97SE} className='mainShow' />
                         </div>
                     </div>
                 </div>

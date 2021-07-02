@@ -168,39 +168,48 @@ width: 400px;
     overflow: hidden;
     background-color: black;
 }
-.blackRow{
-    height:8vh;
-    position: absolute;
-    top:49.25vw;
-    z-index: 100;
-    opacity: 0.5;
-    background-color: white;
-    width: calc(100vw - (100vw - 100%));
-}
+// .blackRow{
+//     height:8vh;
+//     position: absolute;
+//     top:49.25vw;
+//     z-index: 100;
+//     opacity: 0.5;
+//     background-color: white;
+//     width: calc(100vw - (100vw - 100%));
+// }
 .section1{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     .circle{
-        height: 80vh;
-        width: 80vh;
-        background-color: white;
+        height: 500px;
+        width: 500px;
+        margin-top: 70px;
+        background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
         border-radius: 400px;
         z-index: 1;
-        margin-right: 100px;
-        display: flex;
+        margin-right: 120px;
+        // display: flex;
         justify-content: center;
         transition: 1s cubic-bezier(0.46,0.03,0.52,0.96);
-
         // align-items: center;
    
     .mainShow{
-        width:100vh;
-        position: absolute;
-        top:80vh;
-        transform: rotateZ(-25deg);
-        transition: 1s cubic-bezier(0.45,0.05,0.55,0.95);
+        width:600px;
+        margin-top: 50px;
+        // position: absolute;
+        // top:600px;
+        transform: rotateZ(-35deg);
+        animation-iteration-count: infinite;
+        animation-name: bounce;
+        animation-duration: 1.5s;
+        
+        // transition: 1s cubic-bezier(0.45,0.05,0.55,0.95);
         // &:hover{
         //     transform:  rotateZ(-45deg);
         // }
@@ -210,7 +219,7 @@ width: 400px;
      .shoeName{
         font-size: 240px;
         position: absolute;
-        top:100vh;
+        top:600px;
         letter-spacing: -10px;
         // width: 3000px;
         color: white;
@@ -222,9 +231,54 @@ width: 400px;
 font-stretch: condensed;
 font-weight: bold;
 -webkit-text-fill-color: transparent;
--webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-width: 1px;
 text-overflow: clip;
 
+    }
+}
+
+.glassInfoBox{
+    align-self: flex-end;
+    width:480px;
+    height:220px;
+    margin-top: 50px;
+    margin-left: 50px;
+    // border:solid white;
+    // border-width: 0.5px;
+    border: 1px solid transparent;
+            border-image: linear-gradient(to top right, black, rgb(209, 209, 209));
+            border-image-slice: 10;
+            
+    background: linear-gradient(
+        254.27deg,
+        rgba(41, 41, 41, 0.42) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    backdrop-filter: blur(11px);
+    z-index: 5;
+}
+.glassInfo{
+    padding:30px;
+    padding-top: 0;
+    font-family: Jost;
+    text-align: initial;
+    line-height: 45px;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    color: white;
+    text-transform: uppercase;
+}
+
+@keyframes bounce {
+
+
+    0%{
+        transform:  translateY(0px) rotateZ(-35deg);
+    
+    }
+    
+    50%{
+        transform:  translateY(10px) rotateZ(-35deg);
     }
 }
 @keyframes App-logo-spin {
