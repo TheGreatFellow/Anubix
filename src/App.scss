@@ -1,0 +1,237 @@
+/* .App {
+    text-align: center;
+    flex: 1;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+} */
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+} 
+.video {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+.header-1 {
+    height: 90px;
+    width: calc(100vw - (100vw - 100%));
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    font-family: Jost;
+    font-size: 21px;
+    color: rgb(241, 225, 225);
+    font-weight: 400;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.tabs {
+    margin: auto 30px;
+}
+nav {
+        height: 52.6vw;
+    width: 450px;
+    background: linear-gradient(
+        204.27deg,
+        rgba(0, 0, 0, 0.42) 2.5%,
+        rgba(0, 0, 0, 0.06) 100%
+    );
+    backdrop-filter: blur(10px);
+
+    overflow: hidden;
+    position: absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    z-index: 2;
+}
+.navblur {
+    height: 100vh;
+    width: 400px;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    display: flex;
+    filter: blur(4.5vmin);
+    /* background-color: blue; */
+    padding-left: 50px;
+}
+.brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+}
+.logo{
+    filter: invert(100%);
+}
+.heading {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 50px;
+    font-family: Futura;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 0;
+    text-align: left;
+    
+    // left:100px;
+}
+
+.description{
+width: 400px;
+    height: 80px;
+    font-family: Jost;
+    text-align: left;
+    line-height: 55px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+.intro {
+    position: relative;
+    width: 420px;
+    height: 222px;
+    top: 120px;
+    font-family: Futura;
+    font-weight: bold;
+    letter-spacing: -3px;
+    text-align: left;
+    line-height: 55px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 75px;
+}
+
+.vimeo-wrapper {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: calc(100vw - (100vw - 100%));
+    height: 90vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    object-fit: cover;
+}
+.vimeo-wrapper iframe {
+    width: calc(100vw - (100vw - 100%));
+    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+     min-width: 177.77vh;// Given a 16:9 aspect ratio, 16/9*100 = 177.77 
+    position: absolute;
+    top:-50px;
+    z-index: 0;
+
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+}
+.hero{
+    height: 56.25vw;
+    width: calc(100vw - (100vw - 100%));
+    overflow: hidden;
+    background-color: black;
+}
+.section {
+    height: 100vh;
+    width: calc(100vw - (100vw - 100%));
+    overflow: hidden;
+    background-color: black;
+}
+.blackRow{
+    height:8vh;
+    position: absolute;
+    top:49.25vw;
+    z-index: 100;
+    opacity: 0.5;
+    background-color: white;
+    width: calc(100vw - (100vw - 100%));
+}
+.section1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    .circle{
+        height: 80vh;
+        width: 80vh;
+        background-color: white;
+        border-radius: 400px;
+        z-index: 1;
+        margin-right: 100px;
+        display: flex;
+        justify-content: center;
+        transition: 1s cubic-bezier(0.46,0.03,0.52,0.96);
+
+        // align-items: center;
+   
+    .mainShow{
+        width:100vh;
+        position: absolute;
+        top:80vh;
+        transform: rotateZ(-25deg);
+        transition: 1s cubic-bezier(0.45,0.05,0.55,0.95);
+        // &:hover{
+        //     transform:  rotateZ(-45deg);
+        // }
+
+    }
+    }
+     .shoeName{
+        font-size: 240px;
+        position: absolute;
+        top:100vh;
+        letter-spacing: -10px;
+        // width: 3000px;
+        color: white;
+        clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+        font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
+font-stretch: condensed;
+font-weight: bold;
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke-width: 0.5px;
+text-overflow: clip;
+
+    }
+}
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

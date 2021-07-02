@@ -1,58 +1,74 @@
 import logo from './logo.svg'
-import './App.css'
+import './App.scss'
 import Vimeo from '@u-wave/react-vimeo'
-import AirMax from './airMaxVideo.mp4'
-
+import { useEffect, useRef, useState } from 'react'
+// import AirMax from './airMaxVideo.mp4'
+import '../node_modules/locomotive-scroll/src/locomotive-scroll.scss'
+import LocomotiveScroll from 'locomotive-scroll'
+import nikeLogo from './assets/nike-swoosh-logo.svg'
+import airMax97 from './assets/air-max-97.png'
 function App() {
+    const [paused, setPaused] = useState(false)
+    const ref = useRef(null)
+    useEffect(() => {
+        new LocomotiveScroll({
+            el: ref.current,
+            smooth: true,
+        })
+    }, [])
+    function handlePlayerPlay() {
+        setPaused(true)
+    }
     return (
-        <div className='App'>
-            {/* <div className='videoContainer'>
-                <video autoPlay loop className='video'>
-                    <source src={AirMax} type='video/MP4' />
-                </video>
-            </div> */}
-            <div class='vimeo-wrapper'>
-                {' '}
-                <iframe
-                    src='https://player.vimeo.com/video/302326279?background=1&muted=1'
-                    frameborder='0'
-                    webkitallowfullscreen
-                    mozallowfullscreen
-                    allowfullscreen
-                ></iframe>
+        <div>
+            <div className='scroll-container' ref={ref}>
+                <div className='hero'>
+                    <header className='header-1'>
+                        <p className='tabs'>Brands</p>
+                        <p className='tabs'>Shop</p>
+                        <p className='tabs'>Contact Us</p>
+                    </header>
+                    <nav>
+                        <div className='brand'>
+                            <img src={nikeLogo} width={83} className='logo' />
+                            {/* <h1 className='heading'>ANUBIX</h1> */}
+                        </div>
+                        <p className='intro'>Air max 97</p>
+                        <p className='description'>
+                            Reintroducing the classics of the good old times of
+                            '97
+                        </p>
+                    </nav>
+                    <div className='vimeo-wrapper'>
+                        {' '}
+                        {/* <iframe
+                        src='https://player.vimeo.com/video/302326279?background=1&muted=1'
+                        frameborder='0'
+                        webkitallowfullscreen
+                        mozallowfullscreen
+                        allowfullscreen
+                    ></iframe> */}
+                        <Vimeo
+                            video='302326279'
+                            // autoplay
+                            // background
+                            muted
+                            loop
+                            paused={paused}
+                            onReady={handlePlayerPlay}
+                            controls={false}
+                        />
+                    </div>
+                </div>
+                <div className='section'>
+                    <div className='section1'>
+                        <p className='shoeName'>AIRMAX 97 ZIRMAX 97</p>
+                        <div className='circle'>
+                            <img src={airMax97} className='mainShow' />
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <header className='header-1'>
-                <p className='tabs'>Brands</p>
-                <p className='tabs'>Shop</p>
-                <p className='tabs'>Contact Us</p>
-            </header>
-            <nav>
-                <h1 className='heading'>ANUBIX</h1>
-                <p className='subHeading'>
-                    Catalog of the finest sneakers from the finest brands.
-                </p>
-            </nav>
-            <p
-                style={{
-                    zIndex: 10,
-                    position: 'absolute',
-                    top: '97.5vh',
-                    color: 'white',
-                    width: '98vw',
-                    backgroundColor: 'black',
-                }}
-            >
-                Connecting to a Vimeo player If you think the player SDK is
-                great now, just wait until you see it interacting with a video.
-                All you need is an embedded Vimeo player: either an actual
-                player that already exists on your page, or a placeholder
-                element for a dynamically created player. This section shows you
-                how to set up both. Using an existing player If your web page
-                already contains an embedded Vimeo player, you can access the
-                player through the SDK by passing the player element to the
-                Vimeo.Player constructor.
-            </p>
         </div>
     )
 }
