@@ -3,12 +3,12 @@
 This website showcases nike sneakers. It is a personal project of mine which focuses on design and animation. 
 Note: It is still under development. Mobile devices are not supported yet.
 
-## Website is deployed here: [Anubix](https://anubix.vercel.app/)
+ Website is deployed here: [https://anubix.vercel.app/](https://anubix.vercel.app/)
 
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with Create React App
 
 ## Available Scripts
 
