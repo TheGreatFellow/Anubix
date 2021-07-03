@@ -22,7 +22,7 @@ function App() {
     }
     return (
         <div>
-            <div className='scroll-container' ref={ref}>
+            <div className='scroll-container' data-scroll-container ref={ref}>
                 <div className='hero'>
                     <header className='header-1'>
                         <p className='tabs'>Brands</p>
@@ -51,11 +51,11 @@ function App() {
                     ></iframe> */}
                         <Vimeo
                             video='302326279'
-                            autoplay
-                            background
+                            // autoplay
+                            // background
                             muted
                             loop
-                            // paused={paused}
+                            paused={paused}
                             onReady={handlePlayerPlay}
                             controls={false}
                         />
@@ -64,14 +64,27 @@ function App() {
                 <div className='section'>
                     <div className='section1'>
                         <p className='shoeName'>AIRMAX 97 AIRMAX 97</p>
-                        <div className='glassInfoBox'>
-                            <p className='glassInfo'>
+                        <div
+                            className='glassInfoBox'
+                            data-scroll
+                            data-scroll-speed={2}
+                        >
+                            <p className='glassInfo' data-scroll>
                                 Nike Air Max 97 shook up the running world with
                                 og ripple design and crisp color accents
                             </p>
                         </div>
-                        <div className='circle'>
-                            <img src={airMax97} className='mainShow' />
+                        <div
+                            className='circle'
+                            data-scroll
+                            data-scroll-speed={-1}
+                        >
+                            <img
+                                src={airMax97}
+                                className='mainShow'
+                                data-scroll
+                                // data-scroll-speed={2}
+                            />
                         </div>
                     </div>
                 </div>
@@ -80,15 +93,33 @@ function App() {
                         className='section1'
                         style={{ background: '#A69682', height: '100%' }}
                     >
-                        <p className='shoeName'>AIRMAX 97 AIRMAX 97</p>
-                        <div className='glassInfoBox'>
-                            <p className='glassInfo'>
-                                Nike Air Max 97 shook up the running world with
-                                og ripple design and crisp color accents
+                        <p className='shoeName'>AIRMAX 97SE AIRMAX 97SE</p>
+                        <div
+                            className='glassInfoBox'
+                            data-scroll
+                            data-scroll-speed={2}
+                        >
+                            <p
+                                className='glassInfo'
+                                data-scroll
+                                // data-scroll-speed={2}
+                            >
+                                Featuring the ripple design, Air Max 97 SE goes
+                                a little wild with animal print accents for
+                                women
                             </p>
                         </div>
-                        <div className='circle'>
-                            <img src={airMax97SE} className='mainShow' />
+                        <div
+                            className='circle'
+                            data-scroll
+                            data-scroll-speed={-1}
+                        >
+                            <img
+                                src={airMax97SE}
+                                className='mainShow'
+                                data-scroll
+                                // data-scroll-speed={2}
+                            />
                         </div>
                     </div>
                 </div>

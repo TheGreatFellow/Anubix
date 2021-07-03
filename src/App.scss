@@ -199,7 +199,7 @@ width: 400px;
         margin-right: 120px;
         // display: flex;
         justify-content: center;
-        transition: 1s cubic-bezier(0.46,0.03,0.52,0.96);
+        // transition: 1s cubic-bezier(0.46,0.03,0.52,0.96);
         // align-items: center;
    
     .mainShow{
@@ -222,7 +222,8 @@ width: 400px;
      .shoeName{
         font-size: 240px;
         position: absolute;
-        top:600px;
+
+        // top:600px;
         letter-spacing: -10px;
         // width: 3000px;
         color: white;
@@ -236,7 +237,6 @@ font-weight: bold;
 -webkit-text-fill-color: transparent;
 -webkit-text-stroke-width: 1px;
 text-overflow: clip;
-
     }
 }
 
@@ -244,20 +244,20 @@ text-overflow: clip;
     align-self: flex-end;
     width:480px;
     height:220px;
-    margin-top: 50px;
     margin-left: 50px;
+    margin-bottom: 70px;
     // border:solid white;
     // border-width: 0.5px;
     border: 1px solid transparent;
-            border-image: linear-gradient(to top right, black, rgb(209, 209, 209));
+            border-image: linear-gradient(to top right, rgba(0,0,0,0), rgb(209, 209, 209));
             border-image-slice: 10;
-            
-    background: linear-gradient(
-        254.27deg,
-        rgba(41, 41, 41, 0.42) 0%,
-        rgba(0, 0, 0, 0.2) 100%
-    );
-    backdrop-filter: blur(11px);
+    box-shadow: -7px 7px 0 1px white;
+    // background: linear-gradient(
+    //     254.27deg,
+    //     rgba(41, 41, 41, 0.42) 0%,
+    //     rgba(0, 0, 0, 0.2) 100%
+    // );
+    backdrop-filter: blur(8px);
     z-index: 5;
 }
 .glassInfo{
