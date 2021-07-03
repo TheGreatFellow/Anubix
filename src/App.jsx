@@ -34,8 +34,14 @@ function App() {
                             <img src={nikeLogo} width={83} className='logo' />
                             {/* <h1 className='heading'>ANUBIX</h1> */}
                         </div>
-                        <p className='intro'>Air max 97</p>
-                        <p className='description'>
+                        <p className='intro' data-scroll data-scroll-speed={3}>
+                            Air max 97
+                        </p>
+                        <p
+                            className='description'
+                            data-scroll
+                            data-scroll-speed={1}
+                        >
                             Reintroducing the classics of the good old times of
                             '97
                         </p>
@@ -51,11 +57,11 @@ function App() {
                     ></iframe> */}
                         <Vimeo
                             video='302326279'
-                            // autoplay
-                            // background
+                            autoplay
+                            background
                             muted
                             loop
-                            paused={paused}
+                            // paused={paused}
                             onReady={handlePlayerPlay}
                             controls={false}
                         />
