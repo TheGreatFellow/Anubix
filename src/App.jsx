@@ -8,6 +8,7 @@ import LocomotiveScroll from 'locomotive-scroll'
 import nikeLogo from './assets/nike-swoosh-logo.svg'
 import airMax97 from './assets/air-max-97.png'
 import airMax97SE from './assets/air-max-97-se.png'
+import { CustomCursor } from './CustomCursor'
 function App() {
     const [paused, setPaused] = useState(false)
     const ref = useRef(null)
@@ -22,6 +23,7 @@ function App() {
     }
     return (
         <div>
+            <CustomCursor />
             <div className='scroll-container' data-scroll-container ref={ref}>
                 <div className='hero'>
                     <header className='header-1'>
@@ -31,7 +33,7 @@ function App() {
                     </header>
                     <nav>
                         <div className='brand'>
-                            <img src={nikeLogo} width={83} className='logo' />
+                            <img src={nikeLogo} width={93} className='logo' />
                             {/* <h1 className='heading'>ANUBIX</h1> */}
                         </div>
                         <p className='intro' data-scroll data-scroll-speed={3}>
@@ -57,11 +59,11 @@ function App() {
                     ></iframe> */}
                         <Vimeo
                             video='302326279'
-                            autoplay
-                            background
+                            // autoplay
+                            // background
                             muted
                             loop
-                            // paused={paused}
+                            paused={paused}
                             onReady={handlePlayerPlay}
                             controls={false}
                         />
@@ -94,16 +96,17 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className='section'>
-                    <div
-                        className='section1'
-                        style={{ background: '#A69682', height: '100%' }}
-                    >
+                <div className='section' style={{ background: '#A69682' }}>
+                    <div className='section1' style={{ height: '100%' }}>
                         <p className='shoeName'>AIRMAX 97SE AIRMAX 97SE</p>
                         <div
                             className='glassInfoBox'
                             data-scroll
                             data-scroll-speed={2}
+                            style={{
+                                position: 'relative',
+                                bottom: '170px',
+                            }}
                         >
                             <p
                                 className='glassInfo'
