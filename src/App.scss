@@ -15,7 +15,10 @@
         animation: App-logo-spin infinite 20s linear;
     }
 } */
-
+@font-face {
+    font-family:Jost;
+    src: url(./assets/fonts/Jost-VariableFont_wght.ttf) format('truetype');
+}
 .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -99,7 +102,7 @@ nav {
     color: white;
     letter-spacing: 3px;
     font-size: 50px;
-    font-family: Futura;
+    font-family: Jost;
     font-weight: 900;
     font-style: italic;
     letter-spacing: 0;
@@ -123,9 +126,9 @@ width: 400px;
     width: 420px;
     height: 222px;
     top: 120px;
-    font-family: Futura;
+    font-family: Jost;
     font-weight: bold;
-    letter-spacing: -3px;
+    letter-spacing: 1px;
     text-align: left;
     line-height: 55px;
     color: white;
