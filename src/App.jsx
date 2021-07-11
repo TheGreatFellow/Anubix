@@ -9,6 +9,7 @@ import nikeLogo from './assets/nike-swoosh-logo.svg'
 import airMax97 from './assets/air-max-97.png'
 import airMax97SE from './assets/air-max-97-se.png'
 import { CustomCursor } from './CustomCursor'
+import classNames from 'classnames'
 function App() {
     const [paused, setPaused] = useState(false)
     const ref = useRef(null)
@@ -18,6 +19,7 @@ function App() {
             smooth: true,
         })
     }, [])
+
     function handlePlayerPlay() {
         setPaused(true)
     }
@@ -85,6 +87,7 @@ function App() {
                             className='glassInfoBox'
                             data-scroll
                             data-scroll-speed={2}
+                            ref={ref}
                         >
                             <p className='glassInfo' data-scroll>
                                 Nike Air Max 97 shook up the running world with

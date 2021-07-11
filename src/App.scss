@@ -243,6 +243,15 @@ text-overflow: clip;
     // );
     backdrop-filter: blur(8px);
     z-index: 5;
+    clip-path: inset(0%  100% 0% 0%);
+    transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+
+    &.is-inview{
+    clip-path: inset(0% 0% 0% 0%);
+        .glassInfo{
+            transform: scale(1);
+        }
+    }
 }
 .glassInfo{
     padding:30px;
@@ -256,13 +265,7 @@ text-overflow: clip;
     text-transform: uppercase;
 }
 
-// @media (max-width: 1250px) {
-//     .section1{
-//   .circle{
-//       background:blue
-//   }}
-// }
-
+// 
 @keyframes bounce {
 
 
