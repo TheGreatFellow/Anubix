@@ -183,7 +183,10 @@ width: 400px;
         margin-right: 140px;
         // display: flex;
         justify-content: center;
-        // transition: 1s cubic-bezier(0.46,0.03,0.52,0.96);
+        clip-path: circle(0%);
+        transition: clip-path 0.9s ;
+        &.is-inview{
+    clip-path: circle(100%);}
         // align-items: center;
    
     .mainShow{
@@ -229,7 +232,7 @@ text-overflow: clip;
     width:520px;
     height:260px;
     margin-left: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 150px;
     // border:solid white;
     // border-width: 0.5px;
     border: 1px solid transparent;
@@ -244,13 +247,13 @@ text-overflow: clip;
     backdrop-filter: blur(8px);
     z-index: 5;
     clip-path: inset(0%  100% 0% 0%);
-    transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: clip-path 1.1s cubic-bezier(0.77, 0, 0.175, 1);
 
     &.is-inview{
     clip-path: inset(0% 0% 0% 0%);
-        .glassInfo{
-            transform: scale(1);
-        }
+        // .glassInfo{
+        //     transform: scale(1);
+        // }
     }
 }
 .glassInfo{
@@ -265,7 +268,14 @@ text-overflow: clip;
     text-transform: uppercase;
 }
 
-// 
+
+// @media (max-width: 1250px) {
+//     .section1{
+//   .circle{
+//       background:blue
+//   }}
+// }
+
 @keyframes bounce {
 
 

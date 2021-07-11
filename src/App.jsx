@@ -108,6 +108,7 @@ function App() {
                         </div>
                     </div>
                 </div>
+
                 <div className='section' style={{ background: '#A69682' }}>
                     <div className='section1' style={{ height: '100%' }}>
                         <p className='shoeName'>AIRMAX 97SE AIRMAX 97SE</p>
@@ -117,7 +118,7 @@ function App() {
                             data-scroll-speed={2}
                             style={{
                                 position: 'relative',
-                                bottom: '170px',
+                                marginBottom: '170px',
                             }}
                         >
                             <p
