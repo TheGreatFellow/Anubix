@@ -17,6 +17,7 @@ function App() {
         new LocomotiveScroll({
             el: ref.current,
             smooth: true,
+            repeat: true,
         })
     }, [])
 
@@ -35,12 +36,27 @@ function App() {
     return (
         <div>
             <CustomCursor />
+
             <div className='scroll-container' data-scroll-container ref={ref}>
-                <div className='hero'>
+                <div className='hero' data-scroll-section>
                     <header className='header-1'>
-                        <p className='tabs'>Brands</p>
-                        <p className='tabs'>Shop</p>
-                        <p className='tabs'>Contact Us</p>
+                        <a
+                            href='https://www.nike.com/in/'
+                            target='_blank'
+                            className='tabs'
+                        >
+                            Brands
+                        </a>
+                        <a href='#' className='tabs'>
+                            Shop
+                        </a>
+                        <a
+                            href='mailto:shreyas42000@gmail.com'
+                            target='_blank'
+                            className='tabs'
+                        >
+                            Contact
+                        </a>
                     </header>
                     <nav>
                         <div className='brand'>
@@ -53,7 +69,7 @@ function App() {
                         <p
                             className='description'
                             data-scroll
-                            data-scroll-speed={1}
+                            data-scroll-speed={2}
                         >
                             Reintroducing the classics of the good old times of
                             '97
@@ -80,7 +96,7 @@ function App() {
                         />
                     </div>
                 </div>
-                <div className='section'>
+                <div className='section' data-scroll-section>
                     <div className='section1'>
                         <p className='shoeName'>AIRMAX 97 AIRMAX 97</p>
                         <div
@@ -109,7 +125,11 @@ function App() {
                     </div>
                 </div>
 
-                <div className='section' style={{ background: '#A69682' }}>
+                <div
+                    className='section'
+                    style={{ background: '#A69682' }}
+                    data-scroll-section
+                >
                     <div className='section1' style={{ height: '100%' }}>
                         <p className='shoeName'>AIRMAX 97SE AIRMAX 97SE</p>
                         <div
@@ -135,6 +155,7 @@ function App() {
                             className='circle'
                             data-scroll
                             data-scroll-speed={-1}
+                            style={{ background: 'white' }}
                         >
                             <img
                                 src={airMax97SE}

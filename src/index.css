@@ -10,6 +10,10 @@ body {
 * {
     cursor: none;
 }
+::selection {
+    background: rgb(174, 189, 128);
+    color: black;
+}
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
