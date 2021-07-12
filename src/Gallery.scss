@@ -1,0 +1,15 @@
+.content{
+    display: flex;
+}
+
+
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(50, 2%);
+    grid-template-rows: repeat(50, 2%);
+    width:100vw;
+    height: 250vh;
+    background-color: rgb(244, 245, 247);
+    position: relative;
+}

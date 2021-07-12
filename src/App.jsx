@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.scss'
 import Vimeo from '@u-wave/react-vimeo'
 import { useEffect, useRef, useState } from 'react'
@@ -9,7 +8,7 @@ import nikeLogo from './assets/nike-swoosh-logo.svg'
 import airMax97 from './assets/air-max-97.png'
 import airMax97SE from './assets/air-max-97-se.png'
 import { CustomCursor } from './CustomCursor'
-import classNames from 'classnames'
+import Gallery from './Gallery'
 function App() {
     const [paused, setPaused] = useState(false)
     const ref = useRef(null)
@@ -86,8 +85,8 @@ function App() {
                     ></iframe> */}
                         <Vimeo
                             video='302326279'
-                            autoplay
-                            background
+                            // autoplay
+                            // background
                             muted
                             loop
                             // paused={paused}
@@ -123,6 +122,13 @@ function App() {
                             />
                         </div>
                     </div>
+                </div>
+                <div
+                    className='section'
+                    style={{ height: '250vh' }}
+                    data-scroll-section
+                >
+                    <Gallery />
                 </div>
 
                 <div
