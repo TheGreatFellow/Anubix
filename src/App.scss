@@ -291,6 +291,35 @@ text-overflow: clip;
     text-transform: uppercase;
 }
 
+.loadWrapper{
+    height: 100vh;
+    width:100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #070707;
+    color: #dbd8d6;
+}
+.loaderHeading{
+    font-size: 3.8vw;
+    margin:0;
+    text-transform: uppercase;
+    font-family: Jost;
+    letter-spacing: 3px;
+    font-weight: 600;
+
+}
+h2{
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    font-family: 'Badoni Moda';
+    letter-spacing: 3px;
+    // font-style: italic;
+    margin-top: 5px;
+}
+
+
 
 // @media (max-width: 1250px) {
 //     .section1{
