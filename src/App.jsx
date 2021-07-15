@@ -11,7 +11,7 @@ import { CustomCursor } from './CustomCursor'
 import Gallery from './Gallery'
 function App() {
     const [preloader, setPreloader] = useState(true)
-    const [timer, setTimer] = useState(2)
+    const [timer, setTimer] = useState(3)
     const id = useRef(null)
     const clear = () => {
         window.clearInterval(id.current)
