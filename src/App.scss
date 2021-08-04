@@ -310,6 +310,7 @@ text-overflow: clip;
     font-weight: 600;
 
 }
+
 h2{
     font-size: 1.6vw;
     text-transform: uppercase;
@@ -319,7 +320,25 @@ h2{
     margin-top: 5px;
 }
 
+.infoBox{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ccffff;
+    border: 1px solid #070707;
+    display: flex;
+    justify-content: center;
+    height:60px;
+}
 
+.smallText{
+    width:275px;
+    color: black;
+    font-family: Jost;
+    // letter-spacing: 3px;
+    margin: 8px 10px 5px 10px;
+    font-weight: 500;
+}
 
 // @media (max-width: 1250px) {
 //     .section1{

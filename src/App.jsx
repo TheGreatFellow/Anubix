@@ -57,6 +57,12 @@ function App() {
                 <div className='loadWrapper'>
                     <h1 className='loaderHeading'>Anubix</h1>
                     <h2>Bengaluru</h2>
+                    <div className='infoBox'>
+                        <p className='smallText'>
+                            Note: This site is currently optimized for Chrome,
+                            Brave and Edge browsers only.{' '}
+                        </p>
+                    </div>
                 </div>
             ) : (
                 <div
@@ -122,8 +128,8 @@ function App() {
                     ></iframe> */}
                             <Vimeo
                                 video='302326279'
-                                autoplay
-                                background
+                                // autoplay
+                                // background
                                 muted
                                 loop
                                 // paused={paused}
