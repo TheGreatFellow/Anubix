@@ -128,8 +128,8 @@ function App() {
                     ></iframe> */}
                             <Vimeo
                                 video='302326279'
-                                // autoplay
-                                // background
+                                autoplay
+                                background
                                 muted
                                 loop
                                 // paused={paused}
