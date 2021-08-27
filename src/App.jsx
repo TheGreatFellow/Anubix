@@ -59,8 +59,8 @@ function App() {
                     <h2>Bengaluru</h2>
                     <div className='infoBox'>
                         <p className='smallText'>
-                            Note: This site is currently optimized for Chrome,
-                            Brave and Edge browsers only.{' '}
+                            Note: This site is currently not optimized for
+                            safari, firefox or mobile browsers.{' '}
                         </p>
                     </div>
                 </div>
